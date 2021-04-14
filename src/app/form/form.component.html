@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+<form [formGroup]='form'>
+    <div class="form-group row">
+        <div class="col-8">
+            <p>Name <span style="color: red;">*</span></p>
+            <input class="form-control" formControlName='name'>
+            <p><span style="color: red;" *ngIf="form.get('name').errors?.required">Name required</span></p>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-8">
+            <p>Email <span style="color: red;">*</span></p>
+            <input class="form-control" formControlName='email'>
+            <p>
+                <span style="color: red;" *ngIf="form.get('email').errors?.required">Email required</span>
+                <span style="color: red;" *ngIf="form.get('email').errors?.email">Email invalid</span>
+            </p>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-8">
+            <p>Postal ddress <span style="color: red;">*</span></p>
+            <input class="form-control" formControlName='postalAdress'>
+            <p><span style="color: red;" *ngIf="form.get('postalAdress').errors?.required">Postal address required</span></p>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-8">
+            <p>Comments </p>
+            <input class="form-control" formControlName='comment'>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="offset-4 col-8">
+          <button [disabled]='form.invalid' (click)='submitForm()' class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+   
+</form>
+
+

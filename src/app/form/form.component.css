@@ -1,0 +1,16 @@
+form {
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 0%;
+}
+
+button {
+    float: center;
+}
+.col-8 {
+    float: center;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
